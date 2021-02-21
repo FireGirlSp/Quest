@@ -1,1 +1,26 @@
-<p>main-page works!</p>
+<div class="main-block">
+    <h1>Welcome!</h1>
+    <mat-card class="card">
+        <mat-card-header>
+            <div mat-card-avatar class="header-image"></div>
+            <!-- <mat-card-title>Чтобы определить местонахождение твоей девушки, необходимо разгадать первую загадку</mat-card-title> -->
+            <mat-card-title class="card-title">Как называется песня, минус которой приведен ниже?</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <audio controls class="audio">
+                <source src="../../../assets/audio/Для тебя.mp3" type="audio/mpeg">
+            </audio>
+            <p></p>
+            <form [formGroup]="formGroupControl" class="form">
+                <mat-form-field appearance="legacy" class="form-field">
+                    <mat-label>Ответ</mat-label>
+                    <input matInput formControlName="answer">
+                </mat-form-field>
+            </form>
+        </mat-card-content>
+        <mat-card-actions class="actions">
+            <button mat-button class="button"><span>Ответить</span></button>
+            <!-- <button mat-button class="next button" [disabled]="true"><span>Далее</span></button> -->
+          </mat-card-actions>
+    </mat-card>
+</div>
