@@ -10,13 +10,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
 import { RulesPageComponent } from './rules-page/rules-page.component';
 import { FirstComponent } from './questions/first/first.component';
+import { FourthComponent } from './questions/fourth/fourth.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
     RulesPageComponent,
-    FirstComponent
+    FirstComponent,
+    FourthComponent
   ],
   imports: [
     BrowserModule,
