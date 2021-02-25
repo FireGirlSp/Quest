@@ -9,12 +9,14 @@ import {MatCardModule} from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
 import { RulesPageComponent } from './rules-page/rules-page.component';
+import { FirstComponent } from './questions/first/first.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
-    RulesPageComponent
+    RulesPageComponent,
+    FirstComponent
   ],
   imports: [
     BrowserModule,
