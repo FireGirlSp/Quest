@@ -11,6 +11,7 @@ import { MatFormFieldModule, MatInputModule } from '@angular/material';
 import { RulesPageComponent } from './rules-page/rules-page.component';
 import { FirstComponent } from './questions/first/first.component';
 import { FourthComponent } from './questions/fourth/fourth.component';
+import { SecondComponent } from './questions/second/second.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FourthComponent } from './questions/fourth/fourth.component';
     MainPageComponent,
     RulesPageComponent,
     FirstComponent,
-    FourthComponent
+    FourthComponent,
+    SecondComponent
   ],
   imports: [
     BrowserModule,
