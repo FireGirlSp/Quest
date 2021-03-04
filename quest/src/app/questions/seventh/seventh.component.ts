@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-second',
-  templateUrl: './second.component.html',
-  styleUrls: ['./second.component.scss']
+  selector: 'app-seventh',
+  templateUrl: './seventh.component.html',
+  styleUrls: ['./seventh.component.scss']
 })
-export class SecondComponent implements OnInit {
-  
+export class SeventhComponent implements OnInit {
+
   formGroupControl: FormGroup;
 
   constructor() { }

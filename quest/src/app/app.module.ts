@@ -12,6 +12,14 @@ import { RulesPageComponent } from './rules-page/rules-page.component';
 import { FirstComponent } from './questions/first/first.component';
 import { FourthComponent } from './questions/fourth/fourth.component';
 import { SecondComponent } from './questions/second/second.component';
+import { ThirdComponent } from './questions/third/third.component';
+import { TenthComponent } from './questions/tenth/tenth.component';
+import { FifthComponent } from './questions/fifth/fifth.component';
+import { SixthComponent } from './questions/sixth/sixth.component';
+import { SeventhComponent } from './questions/seventh/seventh.component';
+import { EighthComponent } from './questions/eighth/eighth.component';
+import { NinthComponent } from './questions/ninth/ninth.component';
+import { FinalComponent } from './final/final.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +28,15 @@ import { SecondComponent } from './questions/second/second.component';
     RulesPageComponent,
     FirstComponent,
     FourthComponent,
-    SecondComponent
+    SecondComponent,
+    ThirdComponent,
+    TenthComponent,
+    FifthComponent,
+    SixthComponent,
+    SeventhComponent,
+    EighthComponent,
+    NinthComponent,
+    FinalComponent
   ],
   imports: [
     BrowserModule,
