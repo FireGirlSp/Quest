@@ -6,4 +6,12 @@
 
 .mat-card-header {
     padding-bottom: 25px;
+    justify-content: space-between;
+    .mat-card-title {
+        margin: 0 !important;
+    }
+}
+
+.button-icon, .icon {
+    background-color: rgba(255, 255, 255, 0);
 }

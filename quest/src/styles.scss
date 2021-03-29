@@ -69,7 +69,7 @@ $orange: #db7953;
     padding-top: 20px;
 }
 
-h1 {
+.h1 {
     z-index: 0;
     $random-text: 'Welcome!';
     position: relative;
@@ -124,6 +124,7 @@ h1 {
 .form {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 .form-field {
@@ -159,4 +160,12 @@ h1 {
           inset 8px 8px 16px rgba(0, 0, 0, 0.1);
         color: #79e3b6;
     }
+}
+
+.mat-card-header-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0 !important;
+    flex-direction: column;
+    justify-content: center;
 }

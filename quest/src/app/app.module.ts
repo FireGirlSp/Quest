@@ -7,7 +7,7 @@ import { MainPageComponent } from './main-page/main-page/main-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatDialogModule, MatFormFieldModule, MatIconModule, MatInputModule } from '@angular/material';
 import { RulesPageComponent } from './rules-page/rules-page.component';
 import { FirstComponent } from './questions/first/first.component';
 import { FourthComponent } from './questions/fourth/fourth.component';
@@ -20,6 +20,7 @@ import { SeventhComponent } from './questions/seventh/seventh.component';
 import { EighthComponent } from './questions/eighth/eighth.component';
 import { NinthComponent } from './questions/ninth/ninth.component';
 import { FinalComponent } from './final/final.component';
+import { HelpDialogComponent } from './help/help-dialog.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { FinalComponent } from './final/final.component';
     SeventhComponent,
     EighthComponent,
     NinthComponent,
-    FinalComponent
+    FinalComponent,
+    HelpDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -45,8 +47,11 @@ import { FinalComponent } from './final/final.component';
     MatCardModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatIconModule,
+    MatDialogModule
   ],
+  entryComponents: [HelpDialogComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

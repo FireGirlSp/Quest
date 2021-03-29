@@ -2,11 +2,16 @@
     <mat-card class="card">
         <mat-card-header>
             <div mat-card-avatar class="header-image"></div>
-            <!-- <mat-card-title>Чтобы определить местонахождение твоей девушки, необходимо разгадать первую загадку</mat-card-title> -->
             <mat-card-title class="card-title">Заполни пропуски</mat-card-title>
+            <button class="button-icon" (click)="getHelp()">
+                <mat-icon class="icon">help</mat-icon>
+            </button>
         </mat-card-header>
         <mat-card-content>
             <form [formGroup]="formGroupControl" class="form">
+                <audio controls class="audio" *ngIf="isHelp">
+                    <source src="assets/audio/first-quest.mp3" type="audio/mpeg">
+                </audio>
                 <div>
                     <span>Я тут
                         <mat-form-field appearance="legacy" class="form-field">

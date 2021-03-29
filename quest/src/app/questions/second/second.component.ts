@@ -19,8 +19,8 @@ export class SecondComponent implements OnInit {
   }
 
   answer() {
-    //ToDo исправить ответ
-    if (this.formGroupControl.get('answer').value.toLowerCase().trim() === 'для тебя') {
+    const ans = this.formGroupControl.get('answer').value.toLowerCase().trim();
+    if (ans === 'я попрошу у санты' || ans === 'санта') {
       console.log('верно');
     }
   }
