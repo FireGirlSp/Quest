@@ -1,6 +1,9 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { MatDialog } from '@angular/material';
 import { Router } from '@angular/router';
+import { CodeDialogComponent } from 'src/app/code-modal/code-dialog.component';
+
 
 @Component({
   selector: 'app-main-page',
@@ -12,19 +15,22 @@ export class MainPageComponent implements OnInit {
   @ViewChild('container', { static: false }) containerRef: ElementRef;
   @ViewChild('sound', { static: false }) soundRef: ElementRef;
   formGroupControl: FormGroup;
-  formGroupPass: FormGroup;
   isPlayed = false;
+  isStart = false;
+  isCorrect = false;
   // name: FormControl;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+    public dialog: MatDialog) { }
 
   ngOnInit() {
     this.formGroupControl = new FormGroup({
       answer: new FormControl('')
     });
-    this.formGroupPass = new FormGroup({
-      pass: new FormControl('')
-    });
+
+    setTimeout(() => {
+      this.isStart = true;
+    }, 1000);
     // let audio = this.soundRef.nativeElement;
     // console.log(audio);
     // var audio = $("#sound")[0];
@@ -47,12 +53,21 @@ export class MainPageComponent implements OnInit {
   answer() {
     if (this.formGroupControl.get('answer').value.toLowerCase().trim() === 'для тебя') {
       console.log('верно');
+      this.isCorrect = true;
+      this.formGroupControl.get('answer').disable();
+
+      this.openDialog();
     }
   }
 
-  answerPass() {
-    if (this.formGroupPass.get('pass').value.trim() === 'AntonForever') {
-      this.router.navigate(['rules']);
-    }
+  openDialog() {
+    const dialogRef = this.dialog.open(CodeDialogComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(result);
+      if (result.trim() === 'AntonForever') {
+        this.router.navigate(['rules']);
+      }
+    });
   }
 }

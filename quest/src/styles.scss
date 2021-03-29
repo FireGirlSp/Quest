@@ -80,7 +80,7 @@ $orange: #db7953;
     &:before {
         position: absolute;
         content: $random-text;
-        color: rgba($blue, 0.8);
+        color: rgba(#9294f8, 0.8);
         top: 5px;
         left: 10px;
     }
@@ -88,7 +88,7 @@ $orange: #db7953;
         z-index: -1;
         position: absolute;
         content: $random-text;
-        color: rgba($red, 0.8);
+        color: rgba(#79e3b6, 0.8);
         top: -5px;
         left: 8px;
     }
@@ -128,7 +128,8 @@ $orange: #db7953;
 }
 
 .form-field {
-    width: 100%;
+    width: auto;
+    // width: 100%;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -136,9 +137,9 @@ $orange: #db7953;
 .button {
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     -webkit-tap-highlight-color: transparent;
-    background: #f3f0f1;
+    // background: #f3f0f1;
     position: relative;
-    background: #f3f0f1;
+    background: #000000;
     border-radius: 15px;
     text-align: center;
     cursor: pointer;
@@ -152,7 +153,7 @@ $orange: #db7953;
     }
     &:nth-child(1) {
         box-shadow:  6px 6px 10px rgba(0, 0, 0, 0.4);
-        color: rgba($blue, 0.8);
+        color: rgba(#9294f8, 1);
     }
     &:active {
         opacity: 1;

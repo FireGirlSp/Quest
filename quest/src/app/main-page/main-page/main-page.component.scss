@@ -9,6 +9,18 @@
     }
 }
 
+.form-field {
+    width: auto;
+}
+
+.mat-card-content {
+    margin-bottom: 0;
+}
+
+.button:disabled {
+    background-color: #fff;
+}
+
 // .mat-form-field {
 //     .mat-focused {
 //         background-color: rgba($blue, 0.8) i !important;

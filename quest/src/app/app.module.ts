@@ -21,6 +21,7 @@ import { EighthComponent } from './questions/eighth/eighth.component';
 import { NinthComponent } from './questions/ninth/ninth.component';
 import { FinalComponent } from './final/final.component';
 import { HelpDialogComponent } from './help/help-dialog.component';
+import { CodeDialogComponent } from './code-modal/code-dialog.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { HelpDialogComponent } from './help/help-dialog.component';
     EighthComponent,
     NinthComponent,
     FinalComponent,
-    HelpDialogComponent
+    HelpDialogComponent,
+    CodeDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +53,7 @@ import { HelpDialogComponent } from './help/help-dialog.component';
     MatIconModule,
     MatDialogModule
   ],
-  entryComponents: [HelpDialogComponent],
+  entryComponents: [HelpDialogComponent, CodeDialogComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
