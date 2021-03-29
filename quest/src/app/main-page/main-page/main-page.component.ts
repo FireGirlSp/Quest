@@ -18,6 +18,7 @@ export class MainPageComponent implements OnInit {
   isPlayed = false;
   isStart = false;
   isCorrect = false;
+  error: string;
   // name: FormControl;
 
   constructor(private router: Router,
@@ -27,10 +28,6 @@ export class MainPageComponent implements OnInit {
     this.formGroupControl = new FormGroup({
       answer: new FormControl('')
     });
-
-    setTimeout(() => {
-      this.isStart = true;
-    }, 1000);
     // let audio = this.soundRef.nativeElement;
     // console.log(audio);
     // var audio = $("#sound")[0];
@@ -51,12 +48,16 @@ export class MainPageComponent implements OnInit {
   }
 
   answer() {
+    this.error = null;
     if (this.formGroupControl.get('answer').value.toLowerCase().trim() === 'для тебя') {
       console.log('верно');
       this.isCorrect = true;
       this.formGroupControl.get('answer').disable();
 
-      this.openDialog();
+      // this.openDialog();
+    } else {
+      this.formGroupControl.get('answer').setErrors({uncorrectValue: true});
+      this.error = 'Неправильный ответ';
     }
   }
 
@@ -65,9 +66,13 @@ export class MainPageComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       console.log(result);
-      if (result.trim() === 'AntonForever') {
+      if (result && result.trim() === 'AntonForever') {
         this.router.navigate(['rules']);
       }
     });
+  }
+
+  getStart() {
+      this.isStart = true;
   }
 }

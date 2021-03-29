@@ -54,6 +54,9 @@ $orange: #db7953;
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Molle:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 
 
 .main-block {
@@ -65,8 +68,9 @@ $orange: #db7953;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    // padding-bottom: 20px;
+    // padding-top: 20px;
+    font-family: 'PT Sans', sans-serif;
 }
 
 .h1 {
@@ -104,6 +108,8 @@ $orange: #db7953;
 
 .card-title {
     font-size: 14px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
 }
 
 .header-image {
@@ -169,4 +175,22 @@ $orange: #db7953;
     margin-bottom: 0 !important;
     flex-direction: column;
     justify-content: center;
+}
+
+.mat-dialog-title {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    text-align: center;
+}
+
+.mat-card-content {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.cdk-overlay-dark-backdrop {
+    background: rgba(0, 0, 0, 0.50) !important;
+}
+
+.mat-error {
+    padding-left: 15px;
 }
