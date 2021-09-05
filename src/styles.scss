@@ -1,1 +1,230 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$quest-primary: mat-palette($mat-indigo);
+$quest-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$quest-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$quest-theme: mat-light-theme($quest-primary, $quest-accent, $quest-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($quest-theme);
+
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$quest-primary: mat-palette($mat-indigo);
+$quest-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$quest-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$quest-theme: mat-light-theme($quest-primary, $quest-accent, $quest-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($quest-theme);
+
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    border: none;
+    outline: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// Color
+$brown: #2b2520;
+$green: #39dbc2;
+$pink: #f41fbf;
+$yellow: #ffed28;
+$purple: #b028ff;
+$blue: #49A7FF;
+$red: #ff3838;
+$orange: #db7953;
+// Font
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Molle:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+
+.main-block {
+    background-color: black;
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.h1 {
+    z-index: 0;
+    $random-text: 'Welcome!';
+    position: relative;
+    text-transform: uppercase;
+    font-size: 3.8rem;
+    font-family: 'Catamaran', sans-serif;
+    color: rgba(white, 0.8);
+    &:before {
+        position: absolute;
+        content: $random-text;
+        color: rgba(#9294f8, 0.8);
+        top: 5px;
+        left: 10px;
+    }
+    &:after {
+        z-index: -1;
+        position: absolute;
+        content: $random-text;
+        color: rgba(#79e3b6, 0.8);
+        top: -5px;
+        left: 8px;
+    }
+}
+
+.card {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 19px 38px, rgba(255, 255, 255, 0.22) 0px 15px 12px;
+    background-color: rgba(white, 0.9);
+}
+
+.card-title {
+    font-size: 14px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+}
+
+.header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
+.actions {
+    display: flex !important;
+    justify-content: center;
+    height: 2rem;
+}
+
+.next {
+    margin-left: 1rem;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-field {
+    width: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.button {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: transparent;
+    box-shadow:  6px 6px 10px rgba(0, 0, 0, 0.4);
+    position: relative;
+    background: #000000;
+    color: rgba(#9294f8, 1);
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    padding-left: 15px;
+    padding-right: 15px;
+    span {
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+        font-weight: semibold;
+    }
+    &:active {
+        opacity: 1;
+        box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
+        inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+        color: #79e3b6;
+    }
+    &:disabled {
+        box-shadow: none;
+        background-color: #fff;
+        cursor: default;
+    }
+}
+
+.mat-card-header-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0 !important;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mat-dialog-title {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    text-align: center;
+}
+
+.mat-card-content {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.cdk-overlay-dark-backdrop {
+    background: rgba(0, 0, 0, 0.50) !important;
+}
+
+.mat-error {
+    padding-left: 15px;
+}
+
+audio {
+    width: 100%;
+}
+
+.ml {
+    margin-left: 10px;
+}
