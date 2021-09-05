@@ -1,0 +1,89 @@
+<div class="main-block">
+    <h1 class="h1">1</h1>
+    <mat-card class="card">
+        <mat-card-header>
+            <mat-card-title class="card-title">Заполни пропуски</mat-card-title>
+            <button class="button-help" (click)="getHelp()">
+                <mat-icon class="icon">help</mat-icon>
+            </button>
+        </mat-card-header>
+        <mat-card-content>
+            <form [formGroup]="formGroupControl" class="form">
+                <audio controls class="audio" *ngIf="isHelp">
+                    <source src="assets/audio/first-quest.mp3" type="audio/mpeg">
+                </audio>
+                <div>
+                    <span>Я тут
+                        <mat-form-field appearance="legacy" class="form-field">
+                            <mat-label>Ответ</mat-label>
+                            <input matInput formControlName="firstWord">
+                        </mat-form-field>,
+                    чтобы вы понимали кто достоин проекта — это body bag (Е бой!)
+                    </span>
+                    <p>
+                        <span> Килла-Килла, дай нам
+                            <mat-form-field appearance="legacy" class="form-field">
+                                <mat-label>Ответ</mat-label>
+                                <input matInput formControlName="secondWord">
+                            </mat-form-field>
+                        , ещё хотя бы что-нибудь помимо
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            <mat-form-field appearance="legacy" class="form-field" style="padding-left: 0;">
+                                <mat-label>Ответ</mat-label>
+                                <input matInput formControlName="thirdWord">
+                            </mat-form-field>
+                            смеётся, Бишкек грустит
+                        </span>
+                    </p>
+                    <p>Сегодня походу наебнут кумира</p>
+                    <p>Песни писать лень и вы проходите на шару</p>
+                    <p>
+                        <span>
+                            Каждый день, каждый день. Ты чё амбасcадор
+                            <mat-form-field appearance="legacy" class="form-field">
+                                <mat-label>Ответ</mat-label>
+                                <input matInput formControlName="fourthWord">
+                            </mat-form-field>
+                        </span>
+                    </p>
+                    <p>Проебёшь мне как лох</p>
+                    <p>Тут в тебя верит твой друг, в меня остальные</p>
+                    <p>Ты хотел нас остановить нига-нига-нига-ни</p>
+                    <p>На проёб вас давно уже благословили</p>
+                    <p>
+                        <span>
+                            Факты не врут, парень ты
+                            <mat-form-field appearance="legacy" class="form-field">
+                                <mat-label>Ответ</mat-label>
+                                <input matInput formControlName="fifthWord">
+                            </mat-form-field>
+                            , слабенький друг
+                        </span>
+                    </p>
+                    <p>Щавель гидру варит к утру ганджу</p>
+                    <p>
+                        <span>
+                            Пора бы доставать из
+                            <mat-form-field appearance="legacy" class="form-field">
+                                <mat-label>Ответ</mat-label>
+                                <input matInput formControlName="sixthWord">
+                            </mat-form-field>
+                            джокер
+                        </span>
+                    </p>
+                    <p>Но у тебя только Jekajio</p>
+                </div>
+            </form>
+        </mat-card-content>
+        <mat-card-actions class="actions">
+            <button mat-button class="button" (click)="check()" [disabled]="!formGroupControl.valid"><span>Проверить</span></button>
+        </mat-card-actions>
+    </mat-card>
+    <div class="button-nav-container">
+        <button mat-button class="button-nav" *ngIf="isCorrect"><span>Открыть карту</span></button>
+        <button mat-button class="button-nav" (click)="nextPage()" *ngIf="isCorrect"><span>Далее</span></button>
+    </div>
+</div>

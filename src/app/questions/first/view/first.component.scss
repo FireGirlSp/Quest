@@ -1,0 +1,38 @@
+.form-field {
+    padding-right: 0;
+    padding-left: 5px;
+    width: 35%;
+}
+
+.mat-card-header {
+    padding-bottom: 25px;
+    justify-content: space-between;
+    .mat-card-title {
+        margin: 0 !important;
+    }
+}
+
+.h1 {
+    z-index: 0;
+    $random-text: '1';
+    position: relative;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: 'Catamaran', sans-serif;
+    color: rgba(white, 0.8);
+    &:before {
+        position: absolute;
+        content: $random-text;
+        color: rgba(#9294f8, 0.8);
+        top: 5px;
+        left: 10px;
+    }
+    &:after {
+        z-index: -1;
+        position: absolute;
+        content: $random-text;
+        color: rgba(#79e3b6, 0.8);
+        top: -5px;
+        left: 8px;
+    }
+}
