@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material';
 import { Router } from '@angular/router';
+import { CodeDialogComponent } from 'src/app/shared/modals/code/code-dialog/code-dialog.component';
 import { HelpComponent } from 'src/app/shared/modals/help/help.component';
 
 @Component({
@@ -10,10 +11,11 @@ import { HelpComponent } from 'src/app/shared/modals/help/help.component';
   styleUrls: ['./second.component.scss']
 })
 export class SecondComponent implements OnInit {
-  
+
   public formGroupControl: FormGroup;
   public isHelp: boolean;
   public isHelpNext: boolean;
+  public isCorrect: boolean;
 
   constructor(
     public dialog: MatDialog,
@@ -29,7 +31,7 @@ export class SecondComponent implements OnInit {
   public answer() {
     const answer = this.formGroupControl.get('answer').value.toLowerCase().trim();
     if (answer === 'я попрошу у санты' || answer === 'санта') {
-      console.log('верно');
+      this.isCorrect = true;
     }
   }
 
@@ -42,6 +44,14 @@ export class SecondComponent implements OnInit {
       }
       if (result) {
         this.isHelp = true;
+      }
+    });
+  }
+
+  public nextPage() {
+    this.dialog.open(CodeDialogComponent).afterClosed().subscribe(result => {
+      if (result && result.trim() === 'AntonForever') {
+        this.router.navigate(['third']);
       }
     });
   }

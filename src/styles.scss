@@ -228,3 +228,29 @@ audio {
 .ml {
     margin-left: 10px;
 }
+
+.button-nav-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.button-nav {
+    margin-top: 1rem;
+    text-decoration: none;
+    border: 1px solid rgba(146, 148, 248, 0.8);
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(146, 148, 248, 0.8);
+    border-radius: 15px;
+    font-size: 18px;
+}
+
+.button-nav:active {
+    box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+}
+
+.button-help, .icon {
+    background-color: rgba(255, 255, 255, 0);
+}

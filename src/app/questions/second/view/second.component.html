@@ -37,25 +37,10 @@
         </mat-card-content>
         <mat-card-actions class="actions">
             <button mat-button class="button" (click)="answer()"><span>Ответить</span></button>
-            <!-- <button mat-button class="next button" [disabled]="true"><span>Далее</span></button> -->
           </mat-card-actions>
     </mat-card>
-    <!-- <mat-card class="card">
-        <mat-card-header class="password">
-            <mat-card-title class="card-title">Для продолжения необходимо ввести код</mat-card-title> -->
-            <!-- <mat-card-subtitle>Узнать код можно у Лизы</mat-card-subtitle> -->
-        <!-- </mat-card-header>
-        <mat-card-content>
-            <form [formGroup]="formGroupPass" class="form">
-                <mat-form-field appearance="legacy" class="form-field">
-                    <mat-label>Введите код</mat-label>
-                    <input matInput formControlName="pass" type="password">
-                </mat-form-field>
-            </form>
-        </mat-card-content>
-        <mat-card-actions class="actions"> -->
-            <!-- <button mat-button class="button" (click)="answerPass()"><span>Ответить</span></button> -->
-            <!-- <button mat-button class="next button" [disabled]="true"><span>Далее</span></button> -->
-          <!-- </mat-card-actions>
-    </mat-card> -->
+    <div class="button-nav-container">
+        <button mat-button class="button-nav" *ngIf="isCorrect"><span>Открыть карту</span></button>
+        <button mat-button class="button-nav" (click)="nextPage()" *ngIf="isCorrect"><span>Далее</span></button>
+    </div>
 </div>

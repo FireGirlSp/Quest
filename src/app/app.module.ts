@@ -1,19 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule, MatDialogModule, MatFormFieldModule, MatIconModule, MatInputModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { MainPageComponent } from './main-page/view/main-page.component';
 import { CodeDialogComponent } from './shared/modals/code/code-dialog/code-dialog.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatCardModule, MatDialogModule, MatFormFieldModule, MatIconModule, MatInputModule } from '@angular/material';
-import { ReactiveFormsModule } from '@angular/forms';
+import { RulesPageComponent } from './rules-page/view/rules-page.component';
+import { FirstComponent } from './questions/first/view/first.component';
+import { HelpComponent } from './shared/modals/help/help.component';
+import { SecondComponent } from './questions/second/view/second.component';
+import { ThirdComponent } from './questions/third/view/third.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
-    CodeDialogComponent
+    CodeDialogComponent,
+    RulesPageComponent,
+    FirstComponent,
+    HelpComponent,
+    SecondComponent,
+    ThirdComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +37,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatIconModule,
     MatDialogModule,
   ],
-  entryComponents: [CodeDialogComponent],
+  entryComponents: [HelpComponent, CodeDialogComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
