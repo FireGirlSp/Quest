@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { MainPageComponent } from './main-page/view/main-page.component';
+import { FifthComponent } from './questions/fifth/view/fifth.component';
 import { FirstComponent } from './questions/first/view/first.component';
 import { FourthComponent } from './questions/fourth/view/fourth.component';
 import { SecondComponent } from './questions/second/view/second.component';
@@ -16,7 +17,7 @@ const routes: Routes = [
   { path: 'second', component: SecondComponent},
   { path: 'third', component: ThirdComponent},
   { path: 'fourth', component: FourthComponent},
-  // { path: 'fifth', component: FifthComponent},
+  { path: 'fifth', component: FifthComponent},
   // { path: 'sixth', component: SixthComponent},
   // { path: 'seventh', component: SeventhComponent},
   // { path: 'eighth', component: EighthComponent},

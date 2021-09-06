@@ -1,0 +1,61 @@
+<div class="main-block">
+    <h1 class="h1">5</h1>
+    <mat-card class="card">
+        <mat-card-header>
+            <mat-card-title class="card-title">Угадай трек по биту</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form [formGroup]="formGroupControl" class="form">
+                <div class="counter">1</div>
+                <video src="assets/video/auf.mp4" class="video" controls></video>
+                <mat-form-field appearance="legacy" class="form-field">
+                    <mat-label>Название трека</mat-label>
+                    <input matInput formControlName="smiles1" required>
+                </mat-form-field>
+                <div class="counter">2</div>
+                <video src="assets/video/believer.mp4" class="video" controls></video>
+                <mat-form-field appearance="legacy" class="form-field">
+                    <mat-label>Название трека</mat-label>
+                    <input matInput formControlName="smiles2" required>
+                </mat-form-field>
+                <div class="counter">3</div>
+                <video src="assets/video/lose-yourself.mp4" class="video" controls></video>
+                <mat-form-field appearance="legacy" class="form-field">
+                    <mat-label>Название трека</mat-label>
+                    <input matInput formControlName="smiles3" required>
+                </mat-form-field>
+                <div class="counter">4</div>
+                <video src="assets/video/hypnodencer.mp4" class="video" controls></video>
+                <mat-form-field appearance="legacy" class="form-field">
+                    <mat-label>Название трека</mat-label>
+                    <input matInput formControlName="smiles4" required>
+                </mat-form-field>
+                <div class="counter">5</div>
+                <video src="assets/video/merin.mp4" class="video" controls></video>
+                <mat-form-field appearance="legacy" class="form-field">
+                    <mat-label>Название трека</mat-label>
+                    <input matInput formControlName="smiles5" required>
+                </mat-form-field>
+                <div class="counter">6</div>
+                <video src="assets/video/old-town-road.mp4" class="video" controls></video>
+                <mat-form-field appearance="legacy" class="form-field">
+                    <mat-label>Название трека</mat-label>
+                    <input matInput formControlName="smiles5" required>
+                </mat-form-field>
+                <div class="counter">7</div>
+                <video src="assets/video/numbb.mp4" class="video" controls></video>
+                <mat-form-field appearance="legacy" class="form-field">
+                    <mat-label>Название трека</mat-label>
+                    <input matInput formControlName="smiles5" required>
+                </mat-form-field>
+            </form>
+        </mat-card-content>
+        <mat-card-actions class="actions">
+            <button mat-button class="button" (click)="answer()" [disabled]="!formGroupControl.valid"><span>Проверить</span></button>
+        </mat-card-actions>
+    </mat-card>
+    <div class="button-nav-container">
+        <button mat-button class="button-nav" *ngIf="isCorrect"><span>Открыть карту</span></button>
+        <button mat-button class="button-nav" (click)="nextPage()" *ngIf="isCorrect"><span>Далее</span></button>
+    </div>
+</div>

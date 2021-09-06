@@ -1,0 +1,52 @@
+.form {
+    display: block;
+}
+
+.form-field {
+    padding-left: 0;
+    width: 100%;
+}
+
+.video {
+    width: 100%;
+    height: 10rem;
+}
+
+.h1 {
+    z-index: 0;
+    $random-text: '5';
+    position: relative;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: 'Catamaran', sans-serif;
+    color: rgba(white, 0.8);
+    &:before {
+        position: absolute;
+        content: $random-text;
+        color: rgba(#9294f8, 0.8);
+        top: 5px;
+        left: 10px;
+    }
+    &:after {
+        z-index: -1;
+        position: absolute;
+        content: $random-text;
+        color: rgba(#79e3b6, 0.8);
+        top: -5px;
+        left: 8px;
+    }
+}
+
+.counter {
+    width: 1em;
+    height: 1em;
+    padding: .5em;
+    margin-right: 1em;
+    border-radius: 50%;
+    border: .25em solid #ccc;
+    background: #000;
+    color: #fff;
+    font-family: arial;
+    font-weight: bold;
+    text-align: center;
+}

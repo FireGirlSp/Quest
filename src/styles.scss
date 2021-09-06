@@ -237,6 +237,7 @@ audio {
 
 .button-nav {
     margin-top: 1rem;
+    margin-bottom: 1rem;
     text-decoration: none;
     border: 1px solid rgba(146, 148, 248, 0.8);
     position: relative;
@@ -253,4 +254,8 @@ audio {
 
 .button-help, .icon {
     background-color: rgba(255, 255, 255, 0);
+}
+
+.mat-card {
+    margin-bottom: 20px;
 }
