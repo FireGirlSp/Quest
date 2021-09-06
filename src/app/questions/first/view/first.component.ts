@@ -24,6 +24,7 @@ export class FirstComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    window.scroll(0, 0);
     this.formGroupControl = new FormGroup({
       firstWord: new FormControl('', Validators.required),
       secondWord: new FormControl('', Validators.required),

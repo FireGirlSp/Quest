@@ -23,6 +23,7 @@ export class SecondComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    window.scroll(0, 0);
     this.formGroupControl = new FormGroup({
       answer: new FormControl('')
     });
