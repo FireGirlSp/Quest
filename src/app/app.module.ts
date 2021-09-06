@@ -14,6 +14,7 @@ import { FirstComponent } from './questions/first/view/first.component';
 import { HelpComponent } from './shared/modals/help/help.component';
 import { SecondComponent } from './questions/second/view/second.component';
 import { ThirdComponent } from './questions/third/view/third.component';
+import { FourthComponent } from './questions/fourth/view/fourth.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ThirdComponent } from './questions/third/view/third.component';
     FirstComponent,
     HelpComponent,
     SecondComponent,
-    ThirdComponent
+    ThirdComponent,
+    FourthComponent
   ],
   imports: [
     BrowserModule,

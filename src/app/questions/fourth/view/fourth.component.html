@@ -1,0 +1,95 @@
+<div class="main-block">
+    <h1 class="h1">4</h1>
+    <mat-card class="card">
+        <mat-card-header>
+            <mat-card-title class="card-title">Заполни пропуски</mat-card-title>
+            <button class="button-help" (click)="getHelp()">
+                <mat-icon class="icon">help</mat-icon>
+            </button>
+        </mat-card-header>
+        <mat-card-content>
+            <audio controls class="audio" *ngIf="isHelp">
+                <source src="assets/audio/fourth.mp3" type="audio/mpeg">
+            </audio>
+            <form [formGroup]="formGroupControl" class="form">
+                <div>
+                    <span>Ты говорил, что учил русский, но кажется все
+                        <mat-form-field appearance="legacy" class="form-field">
+                            <mat-label>Ответ</mat-label>
+                            <input matInput formControlName="firstWord">
+                        </mat-form-field>
+                    </span>
+                    <p>
+                        <span> Когда исла пишет тексты word
+                            <mat-form-field appearance="legacy" class="form-field">
+                                <mat-label>Ответ</mat-label>
+                                <input matInput formControlName="secondWord">
+                            </mat-form-field>
+                            красным
+                        </span>
+                    </p>
+                    <p>Каждая строка листа, от начала до конца</p>
+                    <p>
+                        <span>Не потому что
+                            <mat-form-field appearance="legacy" class="form-field" style="padding-left: 0;">
+                                <mat-label>Ответ</mat-label>
+                                <input matInput formControlName="thirdWord">
+                            </mat-form-field>
+                            , а потому что хуйня
+                        </span>
+                    </p>
+                    <p>Но о вкусах не спорят, ведь они разные порой</p>
+                    <p>Эрнесто вот понравился панч про как вам на рот</p>
+                    <p>
+                        <span>
+                            Я бы задумался миргород куда тебе
+                            <mat-form-field appearance="legacy" class="form-field">
+                                <mat-label>Ответ</mat-label>
+                                <input matInput formControlName="fourthWord">
+                            </mat-form-field>
+                            дальше
+                        </span>
+                    </p>
+                    <p>Все кричат тебе цифры, но молчат на твои панчи</p>
+                    <p>
+                        <span>
+                            Клянчил
+                            <mat-form-field appearance="legacy" class="form-field">
+                                <mat-label>Ответ</mat-label>
+                                <input matInput formControlName="fifthWord">
+                            </mat-form-field>
+                            на оплату штрафов, корешь угарал
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            Подписота
+                            <mat-form-field appearance="legacy" class="form-field">
+                                <mat-label>Ответ</mat-label>
+                                <input matInput formControlName="sixthWord">
+                            </mat-form-field>
+                            , они считают бабки за финал
+                        </span>
+                    </p>
+                    <p>Не Райан Гиггз, ни Мо Салах, тягаться моветон</p>
+                    <p>
+                        <span>
+                            С тобой одиннадцатый Марк, с нами 12
+                            <mat-form-field appearance="legacy" class="form-field">
+                                <mat-label>Ответ</mat-label>
+                                <input matInput formControlName="seventhWord">
+                            </mat-form-field>
+                        </span>
+                    </p>
+                </div>
+            </form>
+        </mat-card-content>
+        <mat-card-actions class="actions">
+            <button mat-button class="button" (click)="check()" [disabled]="!formGroupControl.valid"><span>Проверить</span></button>
+        </mat-card-actions>
+    </mat-card>
+    <div class="button-nav-container">
+        <button mat-button class="button-nav" *ngIf="isCorrect"><span>Открыть карту</span></button>
+        <button mat-button class="button-nav" (click)="nextPage()" *ngIf="isCorrect"><span>Далее</span></button>
+    </div>
+</div>
