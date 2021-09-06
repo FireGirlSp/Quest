@@ -13,6 +13,8 @@ export class ThirdComponent implements OnInit {
 
   public formGroupControl: FormGroup;
   public isCorrect: boolean;
+  private answersArray = ['ведьмаку заплатите чеканной монетой', 'кадиллак', 'лалли', 'районы-кварталы', 'третий раунд'];
+  private controlsArray = ['smiles1', 'smiles2', 'smiles3', 'smiles4', 'smiles5'];
 
   constructor(
     public dialog: MatDialog,
@@ -30,11 +32,8 @@ export class ThirdComponent implements OnInit {
   }
 
   public answer() {
-    // ToDo исправить ответ
-    if (this.formGroupControl.get('answer').value.toLowerCase().trim() === 'для тебя') {
-      console.log('верно');
-      this.isCorrect = true;
-    }
+    const correct = (element, ind) => this.formGroupControl.get(element).value.toLowerCase().trim() === this.answersArray[ind];
+    this.isCorrect = this.controlsArray.every(correct);
   }
 
   public nextPage() {
